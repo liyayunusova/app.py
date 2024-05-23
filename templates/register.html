@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Интернет-магазин - Регистрация</title>
+{% endblock %}
+
+{% block body %}
+    <main class="main">
+        <section class="heading">
+            <h2 class="heading__heading container">Регистрация</h2>
+        </section>
+        <section class="registration">
+            <div class="registration__content_wrapper container">
+                <form method="post" class="registration__form">
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__form_name_legend">Персональные данные</legend>
+                        <input type="text" class="registration__form_input" name="full_name" placeholder="Фамилия" required>
+                        <input type="email" class="registration__form_input" name="email" placeholder="Email" required>
+                        <input type="password" class="registration__form_input" name="password" placeholder="Пароль" required>
+                        <p class="registration__form_text">Пожалуйста, используйте 8 или более символов, по крайней мере 1 цифру и сочетание прописных и строчных букв</p>
+                    </fieldset>
+                    <button type="submit" class="registration__form_submit" style="width: 250px">Зарегистрироваться</button>
+                </form>
+                {% if error %}
+                <div class="alert alert-danger mt-3">{{ error }}</div>
+                {% endif %}
+                <div class="registration__text">
+                    <h3 class="registration__text_heading">Преимущества программы лояльности</h3>
+                    <ul class="registration__list">
+                        <li class="registration__list_item">Скидка 10% на первую покупку</li>
+                        <li class="registration__list_item">Бесплатная доставка и возврат на все заказы</li>
+                        <li class="registration__list_item">Эксклюзивные предложения и вознаграждения</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

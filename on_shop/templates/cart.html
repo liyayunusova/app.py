@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Интернет-магазин - корзина</title>
+{% endblock %}
+
+{% block body %}
+
+    <main class="main">
+        <section class="heading">
+            <h2 class="heading__heading container">Корзина</h2>
+        </section>
+        <section class="cart container">
+                <h2 class="visually-hidden">Корзина</h2>
+                <div class="cart__wrapper">
+                <ul class="cart__list">
+                    <li class="cart__list-item">
+                        <img src="static/img/images/woman_in_red.jpg" alt="Шорты мандарин" width="262" height="306" class="cart__list-img">
+                        <div class="cart__list-wrapper">
+                            <h3 class="cart__list-heading">Шорты</h3>
+                            <p class="cart__list-text">Стоимость: <span class="cart__list-pink">8 349 руб.</span></p>
+                            <p class="cart__list-text">Цвет: Красный</p>
+                            <p class="cart__list-text">Размер: XL</p>
+                            <div class="cart__list-subwrapper">
+                                <label class="cart__list-text">Количество:</label>
+                                <input type="text" class="cart__list-qty" placeholder="2">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cart__list-item">
+                        <img src="static/img/images/woman_in_black.jpg" alt="Комбинезон с плиссированными брючинами" width="262" height="306" class="cart__list-img">
+                        <div class="cart__list-wrapper">
+                            <h3 class="cart__list-heading">Комбинезон с плиссированными брючинами</h3>
+                            <p class="cart__list-text">Стоимость: <span class="cart__list_item_pink">14 449 руб.</span></p>
+                            <p class="cart__list-text">Цвет: Red</p>
+                            <p class="cart__list-text">Разиер: Xl</p>
+                            <div class="cart__list-subwrapper">
+                                <label class="cart__list-text">Количество:</label>
+                                <input type="text" class="cart__list-qty" placeholder="1">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                    <ul class="cart__list-buttons">
+                        <li><button type="reset" class="cart__list-button">Очистить корзину</button></li>
+                        <a href="/catalog"><li><button type="button" class="cart__list-button">Продолжить покупки</button></li></a>
+                    </ul>
+                </div>                  
+                <div class="cart__shipping_wrapper">
+                    <form action="post" class="cart__shipping">
+                        <h3 class="cart__shipping_heading">Адрес доставки</h3>
+                        <label for="city" class="visually-hidden">Город</label>
+                        <input type="text" id="city" class="cart__shipping_input" placeholder="Санкт-Петербург">
+                        <label for="state" class="visually-hidden">Улица</label>
+                        <input type="text" id="state" class="cart__shipping_input" placeholder="Кантемировская">
+                        <label for="zip" class="visually-hidden">Почтовый индекс</label>
+                        <input type="text" id="zip" class="cart__shipping_input" placeholder="194100">
+                        <button type="submit" class="cart__shipping_button">Сохранить</button>
+                    </form>
+                    <div class="cart__total">
+                        <div class="cart__total_text_wrapper">
+                            <p class="cart__subtotal_text">Общая стоимость (без учета скидок) 31 147 руб.</p>
+                            <p class="cart__grandtotal_text">К оплате 31 147 руб.</p>
+                        </div>
+                        <div class="cart__total_checkout_wrapper">
+                            <hr class="cart__total_line">
+                            <button type="submit" class="cart__total_checkout">Оплатить</button>
+                        </div>
+                    </div>
+                </div>
+            <div class="main__overlay"></div>
+        </section>
+    </main>
+
+{% endblock %}

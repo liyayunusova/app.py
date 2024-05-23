@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Интернет-магазин - Регистрация</title>
+{% endblock %}
+
+{% block body %}
+    <main class="main">
+        <section class="heading">
+            <h2 class="heading__heading container">Регистрация</h2>
+        </section>
+        <section class="registration">
+            <div class="registration__content_wrapper container">
+                <form action="#" method="post" class="registration__form">
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__form_name_legend">Персональные данные</legend>
+                        <input type="text" class="registration__form_input" id="name" placeholder="Фамилия">
+                        <input type="text" class="registration__form_input" id="surname" placeholder="Имя">
+                    </fieldset>
+                    <fieldset class="registration__fieldset_radio">
+                        <legend class="visually-hidden">Пол</legend>
+                        <input type="radio" name="gender" id="male" class="registration__form_radio">
+                        <label for="male" class="registration__form_gender">М</label>
+
+                        <input type="radio" name="gender" id="female" class="registration__form_radio">
+                        <label for="female" class="registration__form_gender">Ж</label>
+                    </fieldset>
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__form_login_legend">Данные для входа в аккаунт</legend>
+                        <input type="email" class="registration__form_input" id="email" placeholder="Email">
+                        <input type="password" class="registration__form_input" id="password" placeholder="Пароль">
+                        <p class="registration__form_text">Пожалуйста, используйте 8 или более символов, по крайней мере
+                            1 цифру и сочетание прописных и строчных букв</p>
+                    </fieldset>
+                    <button type="submit" class="registration__form_submit" style="width: 250px">Зарегистрироваться</button>
+                </form>
+                <div class="registration__text">
+                    <h3 class="registration__text_heading">Преимущества программы лояльности</h3>
+                    <ul class="registration__list">
+                        <li class="registration__list_item">Скидка 10% на первую покупку</li>
+                        <li class="registration__list_item">Бесплатная доставка и возврат на все заказы</li>
+                        <li class="registration__list_item">Эксклюзивные предложения и вознаграждения</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <div class="main__overlay"></div>
+    </main>
+{% endblock %}

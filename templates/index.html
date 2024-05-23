@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Интернет-магазин - главная страница</title>
+{% endblock %}
+
+{% block body %}
+    <main class="main">
+        <section class="intro">
+            <img src="static/img/woman_in_red.jpg" alt="The brand of luxerious fashion" class="intro__img">
+            <div class="intro__heading_wrapper">
+                <div class="intro__heading_verticalbox">&nbsp;</div>
+                <h1 class="intro__heading">the brand<span class="intro__text">of luxerious<span
+                            class="intro__pink">fashion</span></span></h1>
+            </div>
+        </section>
+        <section class="stock">
+            <h2 class="visually-hidden">Stock</h2>
+            <ul class="stock__list container">
+                <li class="stock__item stock__item_woman">
+                    <p class="stock__item_text">Женщинам</p>
+                </li>
+                <li class="stock__item stock__item_man">
+                    <p class="stock__item_text">Мужчинам</p>
+                </li>
+                <li class="stock__item stock__item_kids">
+                    <p class="stock__item_text">Детям</p>
+                </li>
+                <li class="stock__item stock__item_accessoires">
+                    <p class="stock__item_text">Аксессуары</p>
+                </li>
+            </ul>
+        </section>
+        <section class="featured container">
+            <h2 class="featured__heading">Популярные товары</h2>
+            <p class="featured__text">Выбирайте товары на основе трендов этой недели</p>
+            <ul class="featured__list">
+                <li class="featured__item">
+                    <div class="featured__item_imgwrapper">
+                        <img class="featured__item_img" src="static/img/images/kid_in_polo.jpg" alt="Рубашка-поло с короткими рукавами">
+                        <div class="featured__item_overlay"></div>
+                        <button type="button" class="featured__item_button">
+                            <img src="static/img/basket.svg" alt="Добавить в корзину" class="featured__item_btnimg">
+                            <span class="featured__item_btntxt">Добавить в корзину</span>
+                        </button>
+                    </div>
+                    <h3 class="featured__item_heading">Рубашка-поло с короткими рукавами</h3>
+                    <p class="featured__item_text">Футболка-поло с короткими рукавами из трикотажа пике
+                        JACK & JONES (Джек Джонс)
+                    </p>
+                    <p class="featured__item_price">4 599 руб.</p>
+                </li>
+                <li class="featured__item">
+                    <div class="featured__item_imgwrapper">
+                        <img class="featured__item_img" src="static/img/images/woman_in_red.jpg" alt="Шорты мандарин">
+                        <div class="featured__item_overlay"></div>
+                        <button type="button" class="featured__item_button">
+                            <img src="static/img/basket.svg" alt="Добавить в корзину" class="featured__item_btnimg">
+                            <span class="featured__item_btntxt">Добавить в корзину</span>
+                        </button>
+                    </div>
+                    <h3 class="featured__item_heading">Шорты</h3>
+                    <p class="featured__item_text">Шорты мандарин MORGAN. Заниженная посадка, оригинальные карманы спереди.
+                    </p>
+                    <p class="featured__item_price">8 349 руб.</p>
+                </li>
+                <li class="featured__item">
+                    <div class="featured__item_imgwrapper">
+                        <img class="featured__item_img" src="static/img/images/man_in_shirt.jpg" alt="Рубашка в клетку">
+                        <div class="featured__item_overlay"></div>
+                        <button type="button" class="featured__item_button">
+                            <img src="static/img/basket.svg" alt="Добавить в корзину" class="featured__item_btnimg">
+                            <span class="featured__item_btntxt">Добавить в корзину</span>
+                        </button>
+                    </div>
+                    <h3 class="featured__item_heading">Рубашка в клетку с длинными рукавами</h3>
+                    <p class="featured__item_text">Рубашка прямого покроя в клетку с длинными рукавами
+                        зеленый хаки ONLY & SONS</p>
+                    <p class="featured__item_price">4 549 руб.</p>
+                </li>
+                <li class="featured__item">
+                    <div class="featured__item_imgwrapper">
+                        <img class="featured__item_img" src="static/img/images/woman_in_dress.jpg" alt="Платье джинсовое короткое">
+                        <div class="featured__item_overlay"></div>
+                        <button type="button" class="featured__item_button">
+                            <img src="static/img/basket.svg" alt="Добавить в корзину" class="featured__item_btnimg">
+                            <span class="featured__item_btntxt">Добавить в корзину</span>
+                        </button>
+                    </div>
+                    <h3 class="featured__item_heading">Платье джинсовое короткое расклешенное</h3>
+                    <p class="featured__item_text">Платье джинсовое короткое расклешенное
+                        цвет необработанный натуральный MORGAN</p>
+                    <p class="featured__item_price">12 199 руб.</p>
+                </li>
+                <li class="featured__item">
+                    <div class="featured__item_imgwrapper">
+                        <img class="featured__item_img" src="static/img/images/man_in_brown.jpg" alt="Брюки-чинос Jpstmarco">
+                        <div class="featured__item_overlay"></div>
+                        <button type="button" class="featured__item_button">
+                            <img src="static/img/basket.svg" alt="Добавить в корзину" class="featured__item_btnimg">
+                            <span class="featured__item_btntxt">Добавить в корзину</span>
+                        </button>
+                    </div>
+                    <h3 class="featured__item_heading">Брюки-чинос Jpstmarco</h3>
+                    <p class="featured__item_text">Брюки-чинос Jpstmarco каштановый JACK & JONES</p>
+                    <p class="featured__item_price">5 799 руб.</p>
+                </li>
+                <li class="featured__item">
+                    <div class="featured__item_imgwrapper">
+                        <img class="featured__item_img" src="static/img/images/woman_in_black.jpg"
+                            alt="Комбинезон с плиссированными брючинами">
+                        <div class="featured__item_overlay"></div>
+                        <button type="button" class="featured__item_button">
+                            <img src="static/img/basket.svg" alt="Добавить в корзину" class="featured__item_btnimg">
+                            <span class="featured__item_btntxt">Добавить в корзину</span>
+                        </button>
+                    </div>
+                    <h3 class="featured__item_heading">Комбинезон с плиссированными брючинами</h3>
+                    <p class="featured__item_text">Комбинезон свободного покроя с плиссированными брючинами темно-синий</p>
+                    <p class="featured__item_price">14 449 руб.</p>
+                </li>
+            </ul>
+            <a class="featured__link" href="/catalog">
+                <div class="featured__button">Посмотреть все товары</div></a>
+        </section>
+        <section class="advantages">
+            <div class="container advantages__wrapper">
+                <ul class="advantages__list">
+                    <li class="advantages__list-item">
+                        <img class="advantages__list-item-img" src="static/img/truck.svg" height="40" alt="Free Delivery">
+                        <h4 class="advantages__list-heading">Бесплатная доставка</h4>
+                        <p class="advantages__list-text">Доставка по России.
+                        </p>
+                    </li>
+                    <li class="advantages__list-item">
+                        <img class="advantages__list-item-img" src="static/img/percent.svg" height="40" alt="Sales & discounts">
+                        <h4 class="advantages__list-heading">Скидки и акции</h4>
+                        <p class="advantages__list-text"> Специальные предложения каждую неделю.
+                        </p>
+                    </li>
+                    <li class="advantages__list-item">
+                        <img class="advantages__list-item-img" src="static/img/crown.svg" height="40" alt="Quality assurance">
+                        <h4 class="advantages__list-heading">Гарантия качества</h4>
+                        <p class="advantages__list-text">Широкий ассортиент моделей от надежных производителей.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="main__overlay"></div>
+    </main>
+{% endblock %}

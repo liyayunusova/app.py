@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Интернет-магазин - каталог товаров</title>
+{% endblock %}
+
+{% block body %}
+    <main class="main">
+        <section class="heading">
+            <div class="heading__wrapper container">
+                <ul class="nav justify-content-end heading__menu">
+                    <li class="nav-item">
+                        <a class="nav-link heading__nav-link heading__nav-link-first" aria-current="page" href="#home">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link heading__nav-link" href="#man">man</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="catalog container">
+            <div class="catalog__grid">
+                {% for product in products %}
+                <div class="catalog__item">
+                    <div class="catalog__item-imgwrapper">
+                        <img class="catalog__item-img" src="static/img/images/kid_in_polo.jpg" alt="Product image">
+                        <div class="catalog__item-overlay"></div>
+                        <a href="{{ url_for('add_to_cart', product_id=product.product_id) }}">
+                            <button type="button" class="catalog__item-button">
+                                <img src="static/img/basket.svg" alt="Добавить в корзину" class="catalog__item-btnimg">
+                                <span class="catalog__item-btntxt">Добавить в корзину</span>
+                            </button>
+                        </a>
+                    </div>
+                    <h3 class="catalog__item-heading">{{ product.name }}</h3>
+                    <p class="catalog__item-text">{{ product.color }}</p>
+                    <p class="catalog__item-price">{{ product.price }} руб.</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+{% endblock %}

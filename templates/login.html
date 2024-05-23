@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Интернет-магазин - Вход</title>
+{% endblock %}
+
+{% block body %}
+    <main class="main">
+        <section class="heading">
+            <h2 class="heading__heading container">Вход в личный кабинет</h2>
+        </section>
+        <section class="registration">
+            <div class="registration__content_wrapper container">
+                <form method="post" class="registration__form">
+                    <fieldset class="registration__fieldset">
+                        <legend class="registration__form_login_legend">Данные для входа в аккаунт</legend>
+                        <input type="email" class="registration__form_input" name="email" placeholder="Email" required>
+                        <input type="password" class="registration__form_input" name="password" placeholder="Пароль" required>
+                        <p class="registration__form_text">Пожалуйста, используйте 8 или более символов, по крайней мере 1 цифру и сочетание прописных и строчных букв</p>
+                    </fieldset>
+                    <button type="submit" class="registration__form_submit" style="width: 250px">Войти</button>
+                </form>
+                {% if error %}
+                <div class="alert alert-danger mt-3">{{ error }}</div>
+                {% endif %}
+                <ul class="cart__list">
+                    <a href="/register">
+                        <button type="button" class="registration__form_submit" style="width: 250px">Зарегистрироваться</button>
+                    </a>
+                </ul>
+            </div>
+        </section>
+    </main>
+{% endblock %}
